@@ -1,2 +1,13 @@
 # aws-sdk-go
-create a s3 bucket and write unit test cases in golang
+Find All Operations of s3 and Dynamo in go 
+S3: 
+  Create Bucket
+  Delete Bucket
+  List Objects
+  Delete Objects
+
+Dynamo Db:
+  Create Table
+  Delete Table
+  Batch Get Items
+  Batch Write Items
