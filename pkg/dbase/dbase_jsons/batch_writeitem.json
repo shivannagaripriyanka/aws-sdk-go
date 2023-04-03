@@ -1,0 +1,20 @@
+{
+    "NL Statement"        : "Batch Write Item to the table.",
+  
+    "Language"            : "Go",
+  
+    "Version"             : "1.17",
+  
+    "Service"             : "DynamoDB",
+  
+    "SDK"                 : "AWS SDK for Go",
+  
+    "Operation"           : "BatchWriteItem",
+  
+    "Method"              : "",
+  
+    "Method Signature"    : "func (s *Store) BatchWriteItem(in *store.BatchWriteItemInput) (error, *store.BatchWriteItemOutput)",
+ 
+    "Default Parameters"  : "dynamodb_client, table_name"
+  
+  }

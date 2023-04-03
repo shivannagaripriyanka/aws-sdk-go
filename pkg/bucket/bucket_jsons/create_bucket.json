@@ -1,0 +1,22 @@
+{
+  "NL Statement"        : "Create a new bucket with the applied access control list to manage access to the bucket and objects.",
+
+  "Language"            : "Go",
+
+  "Version"             : "1.17",
+
+  "Service"             : "S3",
+
+  "SDK"                 : "AWS SDK for Go",
+
+  "Operation"           : "CreateBucket",
+
+  "Method"              : "",
+
+  "Method Signature"    : "func (s Store) CreateBucket(in store.BucketIn) (error, *store.CreateBucketOutput)",
+
+  "Default Parameters"  : "s3_client, bucket",
+
+  "Shareable Parameters": "location_constraint"
+
+}

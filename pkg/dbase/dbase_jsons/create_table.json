@@ -1,0 +1,20 @@
+{
+    "NL Statement"        : "Create table from the given bucket",
+  
+    "Language"            : "Go",
+  
+    "Version"             : "1.17",
+  
+    "Service"             : "DynamoDB",
+  
+    "SDK"                 : "AWS SDK for Go",
+  
+    "Operation"           : "CreateTable",
+  
+    "Method"              : "",
+  
+    "Method Signature"    : "func (s Store) CreateTable(in store.TableIn) (error, *store.CreateTableOutput)",
+  
+    "Default Parameters"  : "dynamodb_client, table_name"
+  
+  }

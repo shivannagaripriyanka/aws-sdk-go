@@ -1,0 +1,20 @@
+{
+    "NL Statement"        : "Batch Get Items from table from the given bucket",
+  
+    "Language"            : "Go",
+  
+    "Version"             : "1.17",
+  
+    "Service"             : "DynamoDB",
+  
+    "SDK"                 : "AWS SDK for Go",
+  
+    "Operation"           : "BatchGetItem",
+  
+    "Method"              : "",
+  
+    "Method Signature"    : "func (s *Store) BatchGetItem(in *store.BatchGetItemInput) (error, *store.BatchGetItemOutput)",
+  
+    "Default Parameters"  : "dynamodb_client, table_name"
+  
+  }

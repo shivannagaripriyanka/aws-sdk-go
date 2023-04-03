@@ -1,0 +1,22 @@
+{
+    "NL Statement"        : "List objets in a bucket with the applied access control",
+  
+    "Language"            : "Go",
+  
+    "Version"             : "1.17",
+  
+    "Service"             : "S3",
+  
+    "SDK"                 : "AWS SDK for Go",
+  
+    "Operation"           : "ListObjects",
+  
+    "Method"              : "",
+  
+    "Method Signature"    : "func (s *Store) ListObjects(in store.BucketIn) (error, *store.ListObjectsOutput)",
+  
+    "Default Parameters"  : "s3_client, bucket",
+  
+    "Shareable Parameters": "location_constraint"
+  
+  }
