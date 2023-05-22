@@ -1,0 +1,12 @@
+{
+  "NL Statement": "GetQuery Execution using Amazon Athena service",
+  "Language": "GO",
+  "Version": "1.20",
+  "Service": "S3",
+  "SDK": "GO SDK",
+  "Operation": "GetQueryExecution",
+  "Method": "GET",
+  "Method Signature": "func GetQueryExecution(Client *athena.Client, queryID string) (*athena.GetQueryExecutionOutput, error) {",
+  "Default Parameters": "Client, queryID",
+  "Variant Parameters": ""
+}

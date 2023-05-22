@@ -24,16 +24,16 @@ func init() {
 }
 
 func TestCreateBucket(t *testing.T) {
-
-	cfg, err := config.LoadDefaultConfig(context.TODO(), config.WithSharedConfigProfile("default"))
-
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	client := s3.NewFromConfig(cfg)
+	//
+	//cfg, err := config.LoadDefaultConfig(context.TODO(), config.WithSharedConfigProfile("default"))
+	//
+	//if err != nil {
+	//	log.Fatal(err)
+	//}
+	//
+	//_ = s3.NewFromConfig(cfg)
 	bucketName := "shivannagari-priyanka"
-	out, err := bucket.CreateBucket(client, bucketName)
+	out, err := bucket.CreateBucket(s3Client, bucketName)
 	if err != nil {
 		t.Log("Creating bucket failed with error", err, err.Error())
 		t.Fatal("Fail")

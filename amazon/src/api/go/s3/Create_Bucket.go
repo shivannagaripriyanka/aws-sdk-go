@@ -6,11 +6,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/sirupsen/logrus"
 )
 
-/* CreateBucket and ends with */
-func Createbucket(Client *s3.Client, Bucketname string) (*s3.CreateBucketOutput, error) {
+func CreateBucket(S3Client *s3.Client, Bucketname string) (*s3.CreateBucketOutput, error) {
 	/*
 		        This operation creates a new bucket with the defined access to the bucket and objects.
 		    Args:
@@ -22,26 +20,23 @@ func Createbucket(Client *s3.Client, Bucketname string) (*s3.CreateBucketOutput,
 	*/
 
 	// Validates mandatory parameters for null and empty values
-	if Bucketname == "" || Client == nil {
-		logrus.WithFields(logrus.Fields{
-			"[BucketName]": Bucketname,
-			"MethodName":   "Create Bucket",
-			"Error":        "Invalid or EmptyBucketName or Client",
-		}).Info("End")
+	if Bucketname == "" || S3Client == nil {
+		fmt.Printf("Mandatory parameters should not be null or empty.")
 		return &s3.CreateBucketOutput{}, fmt.Errorf(request.InvalidParameterErrCode)
 	}
 
 	// Sends the request to CreateBucket
-	out, err := Client.CreateBucket(context.TODO(), &s3.CreateBucketInput{
+	out, exception := S3Client.CreateBucket(context.TODO(), &s3.CreateBucketInput{
 		Bucket: aws.String(Bucketname),
 	})
 
-	if err != nil {
-		fmt.Printf("Exception occurred while Creating the CreateBucket execution :" + err.Error())
-		return out, err
+	// Returns the exception if it exists
+	if exception != nil {
+		fmt.Printf("Exception occurred while Creating the Bucket :" + exception.Error())
+		return out, exception
 	}
 
-	fmt.Printf("CreateBucket execution operation completed successfully")
+	fmt.Printf("Create Bucket operation completed successfully")
 	// Returns the CreateBucket response
 	return out, nil
 }
